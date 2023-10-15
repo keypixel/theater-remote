@@ -1,0 +1,14 @@
+{
+  "name": "remote",
+  "version": "0.1.0",
+  "description": "SASS compile",
+  "main": "remote.html",
+  "author": "dave",
+  "scripts": {
+    "build:sass": "sass  --no-source-map css/sass:css",
+    "watch:sass": "sass  --no-source-map --watch css/sass:css"
+  },
+  "dependencies": {
+    "sass": "^1.49.8"
+  }
+}
