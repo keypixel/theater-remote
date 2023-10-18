@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+// Variables
+$bg: #000;
+$buttonBG: #111111;
+$buttonBGhover: #303030;
+$buttonIcon: #b4b4b4;
+$buttonIconHover: #fff;
+
+.svg-stroke {
+  fill: transparent;
+  stroke: $buttonIcon;
+  stroke-width: 3px;
+}
+
+@import 'main', 'anthem', 'madvr', 'modal';
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body{
+  background: $bg;
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  overscroll-behavior-y: none; // prevents refresh
+  overscroll-behavior-x: none; // prevents refresh
+  background: $bg;
+}
+
+section {
+  display: none !important;
+  justify-content: center;
+  position: absolute;
+  inset: 0 40px 160px;
+  overflow: hidden;
+  opacity: 0;
+  transition: .2s ease-out;
+  &.active {display: flex !important; opacity: 1;}
+  header{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    img {
+      width: 40%;
+    }
+  } 
+}
+
+// default buttons
+button, .button {
+  border: 0;
+  background: transparent;
+  color: $buttonIcon;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  -webkit-tap-highlight-color: transparent; // hide blue button box when pressed
+  // :hover & cursor just for testing in browser
+  cursor: pointer;
+//  &:hover {background: $buttonBGhover}
+//  &:active svg {stroke: $buttonIconHover !important}
+}
+
+
+
+nav#pages {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  button {
+    padding: 32px;
+    // background: black;
+    svg {
+      @extend .svg-stroke;
+      stroke-width: 1px;
+      height: 60px;
+    }
+    &.active svg {fill: $buttonIcon;}
+    &.main svg {width: 60px}
+    &.plex svg {width: 120px}
+    &.madvr-page svg {width: 80px}
+    &.anthem svg {width: 60px}
+    &.jvc svg {width: 100px}
+    &.lights svg {width: 60px}
+  }
+}

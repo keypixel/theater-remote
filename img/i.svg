@@ -153,9 +153,16 @@
     </symbol>
 
 
-<symbol id="circle" viewBox="0 0 90 90">
-  <circle cx="45" cy="45" r="42"/>
-</symbol>
+    <symbol id="restart" viewBox="0 0 96 100.49">
+        <path d="M34.65,9.5C16.32,15.19,3,32.28,3,52.49c0,24.85,20.15,45,45,45c24.85,0,45-20.15,45-45
+          c0-20.96-14.34-38.58-33.74-43.58"/>
+          <polygon points="25.74,4.07 24.93,5.9 33.96,9.87 29.35,18.59 31.12,19.52 36.74,8.91"/>
+    </reload>
+
+
+    <symbol id="circle" viewBox="0 0 90 90">
+      <circle cx="45" cy="45" r="42"/>
+    </symbol>
 
 
   </defs>

@@ -1,0 +1,212 @@
+
+#power-source {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    #power svg {
+        position: absolute;
+        left: 0;
+        height: 80px;
+        width: 80px;
+        @extend .svg-stroke;
+      }
+    #main_current_input_select {
+      position: absolute;
+      right: 0;
+      background: transparent;
+      
+      border: 0;
+      outline: none;
+      font-size: 3rem;
+      color: &buttonIcon !important;
+      option {
+        background: $buttonBG;
+        color: $buttonIcon;
+      }
+    }
+  }
+  
+
+
+  #aspect-lights {
+    position: absolute;
+    top: 300px;
+    display: flex;
+    align-items: center;
+    transform: translateX(8px);
+    button {
+      margin: 0 32px;
+    }
+    .madvr.aspect169, .madvr.aspect241 {
+      border: .005rem solid $buttonIcon;
+      height: 70px;
+      aspect-ratio: 16 / 9;
+      font-size: 2rem;
+    }
+    .madvr-241 {aspect-ratio: 2.4 / 1}
+    .bulb {
+      // background: black;
+      svg {
+        @extend .svg-stroke;
+        height: 74px;
+        width: 74px;
+        transform: translateY(-6px);
+  
+      }
+    }
+  }
+  
+  
+  
+  #main_zone_volume {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 480px;
+    left: 0;
+    right: 0;
+    height: 160px;
+    line-height: 160px;
+    background: $buttonBG;
+    border-radius: 80px;
+    .range_value {
+      color: $buttonIcon;
+      font-size: 4rem;
+      font-weight: 100;
+    }
+    .plus, .minus {
+      position: absolute;
+      height: inherit;
+      padding: 0 220;
+      background: $buttonBG;
+      border-radius: 80px;
+      &:active {background: $buttonBGhover}
+    }
+    .minus {left: 0; padding-left: 40px}
+    .plus {right: 0; padding-right: 40px}
+  
+    #main_zone_volume_range {
+      display: none;
+      position: absolute;
+      width: 80%;
+      height: 60px;
+    }
+  }
+  
+  
+  // 4 way nav
+  nav.d-pad {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 720px;
+    width: 100%;
+    div {
+      width: 84%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      transform: rotate(45deg);
+      button {
+        display: block;
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 50%;
+        background: $buttonBG;
+        border: 4px solid $bg;
+        &:active {background: $buttonBGhover}
+        // arrows
+        i {
+          display: inline-block;
+          content: '';
+          width: 3rem;
+          height: 3rem;
+          border-left: 1px solid $buttonIcon;
+          border-bottom: 1px solid $buttonIcon;
+        }
+        &:hover i {border-color: $buttonIconHover}
+        &.up{
+          border-radius: 100% 0 0 0;
+          & i {transform: rotate(90deg)}
+        }
+        &.right{
+          border-radius: 0 100% 0 0;
+          & i {transform: rotate(180deg)}
+        }
+        &.left{
+          border-radius: 0 0 0 100%;
+        }
+        &.down{
+          border-radius: 0 0 100% 0;
+          & i {transform: rotate(270deg)}
+        }
+      
+        &.enter {
+          display: block;
+          position: absolute;
+          height: 44%; 
+          width: 44%;
+          top: 28%; // = 100 - height / 2 
+          left: 28%;
+          background: &button;
+          border-radius: 50%;
+          border: 6px solid $bg;
+        }
+      } // button
+    } // div
+  
+    .back, .home {
+      position: absolute;
+      bottom: -10px;
+      width: 14%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: $buttonBG;
+      &:active {background: $buttonBGhover}
+      svg {
+        @extend .svg-stroke;
+        height: 50%;
+        width: 50%;
+      }
+    }
+    .back {
+      left: 10px; 
+      svg{margin-right: 10px;}
+    }
+    .home {right: 10px}
+  } // nav#controls
+  
+  
+  #video_controls {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1580px;
+    left: 0;
+    right: 0;
+    height: 160px;
+    background: $buttonBG;
+    border-radius: 80px;
+    button {
+      position: absolute;
+      height: inherit;
+      font-weight: 100;
+      color: $buttonIcon;
+      padding: 0 60px;
+      border-radius: 80px;
+      &:active {background: $buttonBGhover}
+      svg {
+        @extend .svg-stroke;
+        height: 100px;
+        width: 100px;
+      }
+      &.rewind {left: 186px}
+      &.rewind-fast {left:0}
+      &.forward {right: 186px}
+      &.forward-fast {right:0}
+    }
+  }
+  

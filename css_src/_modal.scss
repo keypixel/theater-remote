@@ -1,0 +1,66 @@
+  body {
+
+    .modal.power {
+      position: absolute;
+      inset: 0;
+      transition: .2s ease-out;
+      display: none;
+      &.on {display: block}
+      .bg {
+        display: flex;
+        position: absolute;
+        inset: 0; 
+        z-index: 9;
+        height: 300px;
+        background: #000;
+        top: -300px;
+        transition: .2s ease-out;
+        box-shadow:  0 0 200px 5px rgba(134, 200, 255, 0.6);
+        button {
+          vertical-align: middle;
+          text-align: center;
+          height: 80px;
+          padding: 0;
+          width: 246px;
+          height: 300px;
+          svg {
+            @extend .svg-stroke;
+            height: 90px;
+            width: 90px
+          }
+        span {
+          display: inline-block;
+          width: inherit;
+          text-align: center;
+          margin-top: 20px;
+            font-size: 2.4rem;
+          }
+        }
+      }
+    }
+    // body modal on
+    &.modal-power-on {
+      .modal.power {
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        .bg {
+          top: 0;
+        }
+      }
+    }
+
+  }
+
+
+
+
+
+#reload {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+    font-size: 2rem;
+    color: #fff;
+    opacity: .1;
+  }
+  
