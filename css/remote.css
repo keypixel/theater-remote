@@ -232,6 +232,112 @@ nav.d-pad .home {
   right: 0;
 }
 
+/* switch  button */
+/* Hide default HTML checkbox */
+.avm70 .switch {
+  position: absolute;
+  display: inline-block;
+  width: 52px;
+  height: 30px;
+  margin-top: 4px;
+}
+.avm70 .switch:focus {
+  box-shadow: 0 0 #FFF;
+}
+.avm70 .switch:focus-within {
+  box-shadow: 0 0 #FFF;
+}
+.avm70 .switch span:focus {
+  box-shadow: 0 0 #FFF;
+}
+.avm70 .switch input {
+  display: none;
+}
+.avm70 .switch input:focus {
+  box-shadow: 0 0 #FFF;
+}
+.avm70 .switch_track {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #808184;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  height: 30px;
+  border-radius: 15px;
+}
+.avm70 .switch_track:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.avm70 input:checked + .switch_track {
+  background-color: #4cd964;
+}
+.avm70 input:checked + .switch_track:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  -o-transform: translateX(20px);
+  transform: translateX(19.5px);
+}
+.avm70 input:checked:disabled + .switch_track {
+  background-color: #98fb98;
+  cursor: not-allowed;
+}
+.avm70 input:focus + .switch_track {
+  box-shadow: 0 0 1px #2196F3;
+}
+.avm70 input:not(:checked):disabled + .switch_track {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+.avm70 button.switch[aria-checked] {
+  box-sizing: border-box;
+  padding: 0;
+  background-color: inherit;
+}
+.avm70 button.switch[aria-checked]:focus .switch_track {
+  box-shadow: 0 0 1px #2196f3;
+}
+.avm70 button.switch[aria-checked=true] .switch_track {
+  background-color: #4cd964;
+}
+.avm70 button.switch[aria-checked=true] .switch_track:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  -o-transform: translateX(20px);
+  transform: translateX(19.5px);
+}
+.avm70 button.switch[aria-checked=true]:disabled .switch_track {
+  background-color: #98fb98;
+  cursor: not-allowed;
+}
+.avm70 button.switch[aria-checked=false]:disabled .switch_track {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+div.avm70 {
+  position: absolute;
+  top: 200px;
+}
+
 #madvr-page {
   display: flex;
   flex-direction: column;
@@ -366,6 +472,12 @@ section header {
 }
 section header img {
   width: 40%;
+}
+
+.page {
+  position: absolute;
+  inset: 180px 0 0 0;
+  border: 1px solid red;
 }
 
 button, .button {

@@ -1,6 +1,7 @@
 
+
 function sendCharacter(character) {
-    
+    console.log(character);
     fetch('/theater-remote/scripts/send-keys.php', {
         method: 'POST',
         headers: {
@@ -8,31 +9,48 @@ function sendCharacter(character) {
         },
         body: 'character=' + encodeURIComponent(character)
     })
-    .then(response => response.text())
-    .then(responseText => {
-        $('#response').textContent += responseText;
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+        .then(response => response.text())
+        .then(responseText => {
+            $get('#response').textContent += responseText;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
 
 function madVR() {
+    console.log('madVR loaded');
     let keyInterval = null;
     const incrementInterval = 60;
 
-    $$('button.madvr').forEach($button => {
-
+    $$get('button.madvr').forEach($button => {
         $button.addEventListener('touchstart', event => {
             event.preventDefault();
             const character = event.target.getAttribute('value');
-            console.log(character);
-            sendCharacter(character);
+            
+            if ($button.className.includes('incriment')) {
+                let count = 0;
+                // get max interval from class
+                const max = parseInt($button.className.match(/\b(\d+)\b/));
 
-            if ($button.classList.contains('incriment')) {
-                keyInterval = setInterval(() => {
-                    sendCharacter(character);
-                }, incrementInterval);
+                if (max) { 
+                    console.log(max);
+                    keyInterval = setInterval(() => {
+                        if (count < max) {
+                          sendCharacter(character);
+                          count++;
+                    
+                          if (count === max) {
+                            clearInterval(keyInterval);
+                            console.log('max reached = ', max);
+                          }
+                        }
+                      }, incrementInterval);
+                }
+            } else {
+                // only send once
+                console.log('send once = ', character);
+                sendCharacter(character);
             }
         });
 
@@ -53,5 +71,8 @@ function madVR() {
 
 }
 
-
-madVR();
+window.onload = function() {
+    power();
+    tabs();
+    madVR();
+}

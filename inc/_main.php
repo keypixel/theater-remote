@@ -17,12 +17,6 @@
     </div>
 
 
-    <div id="main_zone_volume">
-      <button class="plus">+</button>
-      <div class="range_value">-50.0 dB</div>
-      <input id="main_zone_volume_range" type="range" min="-90" max="-20" value="-35.0">
-      <button class="minus">-</button>
-    </div>
 
     <nav class="d-pad">
       <div>

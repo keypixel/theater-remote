@@ -1,38 +1,33 @@
-// on page load - in raw javascript
+var $get = function (selector, parent) { return (parent ? parent : document).querySelector(selector); };
+var $$get = function (selector, parent) { return (parent ? parent : document).querySelectorAll(selector); };
 
-var $ = function (selector, parent) { return (parent ? parent : document).querySelector(selector); };
-var $$ = function (selector, parent) { return (parent ? parent : document).querySelectorAll(selector); };
-
-
-window.onload = function() {
-
-
-  $('.modal').addEventListener('click', function(){
-    $('body').classList.remove('modal-power-on');
+function power() {
+  console.log('power loaded');
+  $get('.modal').addEventListener('click', function(){
+    $get('body').classList.remove('modal-power-on');
     
     setTimeout(() => {
-      $('.modal.power').classList.remove('on');
+      $get('.modal.power').classList.remove('on');
     }, 200);
   })
 
-  $('#power').addEventListener('click', function(){
-    $('.modal.power').classList.add('on');
+  $get('#power').addEventListener('click', function(){
+    $get('.modal.power').classList.add('on');
     setTimeout(() => {
-      $('body').classList.add('modal-power-on');
+      $get('body').classList.add('modal-power-on');
     }, 10);
-
   })
 
-  $('#reload').addEventListener('click', function(){
+  $get('#reload').addEventListener('click', function(){
     window.location.reload(true);
- })
+  })
+}
 
 
-
-
+function tabs() {
+  console.log('tabs loaded');
   // Get all elements that match the selector '#pages button'
-  var $pages = $$('#pages button');
-
+  var $pages = $$get('#pages button');
 
   // Add a click event listener to each element
   $pages.forEach(function($page) {
@@ -41,14 +36,18 @@ window.onload = function() {
           const cls = $page.classList;
           
           if (!cls.contains('active') ) {
-            $('section.active').classList.remove('active');
-            $('#pages .active').classList.remove('active');
+            $get('section.active').classList.remove('active');
+            $get('#pages .active').classList.remove('active');
 
-            $(`#${cls}`).classList.add('active');
+            $get(`#${cls}`).classList.add('active');
             $page.classList.add('active');
           }
       });
   });
 
+}
 
+window.onload = function() {
+  power();
+  tabs();
 }

@@ -53,6 +53,12 @@ section {
   } 
 }
 
+.page {
+  position: absolute;
+  inset: 180px 0 0 0;
+  border: 1px solid red;
+}
+
 // default buttons
 button, .button {
   border: 0;

@@ -1,7 +1,7 @@
 <head>
   <head>
     <title>Remote</title>
-    <link rel="stylesheet" type="text/css" href="css/remote.css?<?= date('YmdHis'); ?>" />    
+    <link rel="stylesheet" type="text/css" href="css/remote.css?<?= date('YmdHis'); ?>" />
     <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="user-scalable=0">
     <script src="js/script.js?<?= date('YmdHis'); ?>"></script>
@@ -39,4 +39,10 @@
 
 
   </main>
+
+<?php /* <script src="js/libs/avm70/jquery-3.6.0.min.js"></script>
+<script src="js/libs/avm70/jquery.mask.min.js"></script>
+<script src="js/libs/avm70/bootstrap.bundle.min.js"></script>
+<script src="js/libs/avm70/merged.min.js"></script> */ ?>
+
 </body>

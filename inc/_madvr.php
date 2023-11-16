@@ -3,33 +3,33 @@
 <div id="response"></div>
     <div>
         <label>black levels</label> 
-        <button value="v" name="decrease" class="madvr incriment">&#x2228;</button>
-        <button value="b" name="increase" class="madvr incriment">&#x2227;</button>
+        <button value="v" name="decrease" class="madvr incriment-10">&#x2228;</button>
+        <button value="b" name="increase" class="madvr incriment-10">&#x2227;</button>
     </div>
     <div>
         <label>white levels</label> 
-        <button value="q" name="decrease" class="madvr incriment">&#x2228;</button>
-        <button value="w" name="increase" class="madvr incriment">&#x2227;</button>
+        <button value="q" name="decrease" class="madvr incriment-10">&#x2228;</button>
+        <button value="w" name="increase" class="madvr incriment-10">&#x2227;</button>
     </div>
     <div>
         <label>brightness</label> 
-        <button value="k" name="decrease" class="madvr incriment">&#x2228;</button>
-        <button value="l" name="increase" class="madvr incriment">&#x2227;</button>
+        <button value="k" name="decrease" class="madvr incriment-10">&#x2228;</button>
+        <button value="l" name="increase" class="madvr incriment-10">&#x2227;</button>
     </div>
     <div>
         <label>contrast</label> 
-        <button value="x" name="decrease" class="madvr incriment">&#x2228;</button>
-        <button value="c" name="increase" class="madvr incriment">&#x2227;</button>
+        <button value="x" name="decrease" class="madvr incriment-10">&#x2228;</button>
+        <button value="c" name="increase" class="madvr incriment-10">&#x2227;</button>
     </div>
     <div>
         <label>saturation</label> 
-        <button value="a" name="decrease" class="madvr incriment">&#x2228;</button>
-        <button value="s" name="increase" class="madvr incriment">&#x2227;</button>
+        <button value="a" name="decrease" class="madvr incriment-10">&#x2228;</button>
+        <button value="s" name="increase" class="madvr incriment-10">&#x2227;</button>
     </div>
     <div>
         <label>hue</label> 
-        <button value="g" name="decrease" class="madvr incriment">&#x2228;</button>
-        <button value="h" name="increase" class="madvr incriment">&#x2227;</button>
+        <button value="g" name="decrease" class="madvr incriment-10">&#x2228;</button>
+        <button value="h" name="increase" class="madvr incriment-10">&#x2227;</button>
     </div>
     <div>
         <button value="j" class="madvr toggle">debug</button>
