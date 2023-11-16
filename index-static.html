@@ -29,7 +29,12 @@
         <button class="bulb off"><svg><use href="img/i.svg#bulb"/></svg></button>
       </div>
   
-  
+      <div id="main_zone_volume" class="col-6 range">
+        <div class="minus">-</div>
+        <input id="main_zone_volume_range" type="range" min="-90" max="-18" step="0.5" value="-35.0">
+        <div class="plus">+</div>
+        <div class="range_value text-center">-50.0 dB</div>
+     </div>
   
       <nav class="d-pad">
         <div>
@@ -52,47 +57,57 @@
       </div>
   </section>
       <section id="plex"><header><img src=img/plex-logo.svg /></header></section>
-      <section id="madvr-page"><header><img src="img/madvr-logo.png" /></header>
+  
+  
+  <section id="madvr-page">
+    
+    <header><img src="img/madvr-logo.png" /></header>
   
   <div id="response"></div>
+
+  <div class="adjustments">
       <div>
           <label>black levels</label> 
-          <button value="v" name="decrease" class="madvr incriment-10">&#x2228;</button>
-          <button value="b" name="increase" class="madvr incriment-10">&#x2227;</button>
+          <button value="v" name="decrease" class="madvr incriment-10 dec"> - </button>
+          <button value="b" name="increase" class="madvr incriment-10 inc"> + </button>
       </div>
       <div>
           <label>white levels</label> 
-          <button value="q" name="decrease" class="madvr incriment-10">&#x2228;</button>
-          <button value="w" name="increase" class="madvr incriment-10">&#x2227;</button>
+          <button value="q" name="decrease" class="madvr incriment-10 dec"> - </button>
+          <button value="w" name="increase" class="madvr incriment-10 inc"> + </button>
       </div>
       <div>
           <label>brightness</label> 
-          <button value="k" name="decrease" class="madvr incriment-10">&#x2228;</button>
-          <button value="l" name="increase" class="madvr incriment-10">&#x2227;</button>
+          <button value="k" name="decrease" class="madvr incriment-10 dec"> - </button>
+          <button value="l" name="increase" class="madvr incriment-10 inc"> + </button>
       </div>
       <div>
           <label>contrast</label> 
-          <button value="x" name="decrease" class="madvr incriment-10">&#x2228;</button>
-          <button value="c" name="increase" class="madvr incriment-10">&#x2227;</button>
-      </div>
-      <div>
-          <label>saturation</label> 
-          <button value="a" name="decrease" class="madvr incriment-10">&#x2228;</button>
-          <button value="s" name="increase" class="madvr incriment-10">&#x2227;</button>
+          <button value="x" name="decrease" class="madvr incriment-10 dec"> - </button>
+          <button value="c" name="increase" class="madvr incriment-10 inc"> + </button>
       </div>
       <div>
           <label>hue</label> 
-          <button value="g" name="decrease" class="madvr incriment-10">&#x2228;</button>
-          <button value="h" name="increase" class="madvr incriment-10">&#x2227;</button>
+          <button value="g" name="decrease" class="madvr incriment-10 dec"> - </button>
+          <button value="h" name="increase" class="madvr incriment-10 inc"> + </button>
       </div>
       <div>
-          <button value="j" class="madvr toggle">debug</button>
-          <button value="r" class="madvr toggle">reset</button>
-          <button value="f" class="madvr toggle">freeze report</button>
-          <button value="t" class="madvr toggle">seekbar</button>
-          <button value="y" class="madvr toggle">output levels</button>
-          <button value="i" class="madvr toggle">source levels</button>
-      </div></section>
+        <label>saturation</label> 
+        <button value="a" name="decrease" class="madvr incriment-10 dec"> - </button>
+        <button value="s" name="increase" class="madvr incriment-10 inc"> + </button>
+    </div>
+    </div>
+
+    <div class="debug">
+        <button value="j" class="madvr toggle">debug</button>
+        <button value="r" class="madvr toggle">reset</button>
+        <button value="f" class="madvr toggle">freeze report</button>
+        <button value="t" class="madvr toggle">seekbar</button>
+        <button value="y" class="madvr toggle">output levels</button>
+        <button value="i" class="madvr toggle">source levels</button>
+    </div>
+    
+    </section>
       <section id="anthem"><header><img src=img/anthem-logo.svg /></header>
   
   <div id="main_zone_page" class="page avm70">
@@ -159,11 +174,11 @@
   </header></section>
       <nav id="pages">
         <button class="main active"><svg><use href="img/i.svg#home"/></svg></button>
-        <button class="plex"><svg><use href="img/i.svg#plex"/></svg></button>
         <button class="madvr-page"><svg><use href="img/i.svg#madvr"/></svg></button>
         <button class="anthem"><svg><use href="img/i.svg#anthem"/></svg></button>
         <button class="jvc"><svg><use href="img/i.svg#jvc"/></svg></button>
         <button class="lights"><svg><use href="img/i.svg#lights"/></svg></button>
+        <button class="plex"><svg><use href="img/i.svg#plex"/></svg></button>
       </nav>
   
       <div class="modal power">

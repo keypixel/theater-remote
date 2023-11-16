@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
-.svg-stroke, nav#pages button svg, body .modal.power .bg button svg, #video_controls button svg, nav.d-pad .back svg, nav.d-pad .home svg, #aspect-lights .bulb svg, #power-source #power svg {
+.svg-stroke, nav#pages button svg, body .modal.power .bg button svg, #video_controls button svg, nav.d-pad .back svg,
+nav.d-pad .home svg, #aspect-lights .bulb svg, #power-source #power svg {
   fill: transparent;
   stroke: #b4b4b4;
   stroke-width: 3px;
@@ -41,7 +42,8 @@
 #aspect-lights button {
   margin: 0 32px;
 }
-#aspect-lights .madvr.aspect169, #aspect-lights .madvr.aspect241 {
+#aspect-lights .madvr.aspect169,
+#aspect-lights .madvr.aspect241 {
   border: 0.005rem solid #b4b4b4;
   height: 70px;
   aspect-ratio: 16/9;
@@ -74,14 +76,16 @@
   font-size: 4rem;
   font-weight: 100;
 }
-#main_zone_volume .plus, #main_zone_volume .minus {
+#main_zone_volume .plus,
+#main_zone_volume .minus {
   position: absolute;
   height: inherit;
   padding: 0 220;
   background: #111111;
   border-radius: 80px;
 }
-#main_zone_volume .plus:active, #main_zone_volume .minus:active {
+#main_zone_volume .plus:active,
+#main_zone_volume .minus:active {
   background: #303030;
 }
 #main_zone_volume .minus {
@@ -167,7 +171,8 @@ nav.d-pad div button.enter {
   border-radius: 50%;
   border: 6px solid #000;
 }
-nav.d-pad .back, nav.d-pad .home {
+nav.d-pad .back,
+nav.d-pad .home {
   position: absolute;
   bottom: -10px;
   width: 14%;
@@ -175,10 +180,12 @@ nav.d-pad .back, nav.d-pad .home {
   border-radius: 50%;
   background: #111111;
 }
-nav.d-pad .back:active, nav.d-pad .home:active {
+nav.d-pad .back:active,
+nav.d-pad .home:active {
   background: #303030;
 }
-nav.d-pad .back svg, nav.d-pad .home svg {
+nav.d-pad .back svg,
+nav.d-pad .home svg {
   height: 50%;
   width: 50%;
 }
@@ -342,30 +349,52 @@ div.avm70 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
+  color: #b4b4b4;
   font-size: 3rem;
 }
-#madvr-page img {
-  width: 50%;
-}
-#madvr-page div {
+#madvr-page .adjustments div {
   margin: 14px;
+  display: flex;
+  align-items: center;
 }
 #madvr-page label {
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+  width: 40vw;
   text-transform: uppercase;
 }
 #madvr-page button {
-  margin: 10px;
-  color: #000;
-  text-transform: uppercase;
-  padding: 20px 40px;
-  border-radius: 20px;
+  margin: 10px 0;
+  height: 120px;
+  border-radius: 60px;
+  white-space: nowrap;
+  background: #111111;
   border: none;
   background: #111111;
-  color: #DFDEDF;
+  color: #b4b4b4;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+#madvr-page button:active {
+  background: #303030;
+}
+#madvr-page button.dec, #madvr-page button.inc {
+  padding: 0;
+  width: 160px;
+}
+#madvr-page button.dec {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#madvr-page button.inc {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#madvr-page button.toggle {
+  margin: 20px 10px;
+  padding: 0 80px;
 }
 #madvr-page #response {
   position: absolute;
@@ -477,7 +506,6 @@ section header img {
 .page {
   position: absolute;
   inset: 180px 0 0 0;
-  border: 1px solid red;
 }
 
 button, .button {
