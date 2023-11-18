@@ -21,38 +21,41 @@ function sendCharacter(character) {
 function madVR() {
     console.log('madVR loaded');
     let keyInterval = null;
-    const incrementInterval = 60;
+    const incrementInterval = 200;
 
     $$get('button.madvr').forEach($button => {
+        
         $button.addEventListener('touchstart', event => {
             event.preventDefault();
-            const character = event.target.getAttribute('value');
-            
+            const character = $button.value;
+            // console.log(character);
+
             if ($button.className.includes('incriment')) {
                 let count = 0;
-                // get max interval from class
-                const max = parseInt($button.className.match(/\b(\d+)\b/));
+                // get max incriment from class
+                const maxIncriment = parseInt($button.className.match(/\b(\d+)\b/));
 
-                if (max) { 
-                    console.log(max);
+                if (maxIncriment) { 
+                    // console.log(maxIncriment);
                     keyInterval = setInterval(() => {
-                        if (count < max) {
+                        if (count < maxIncriment) {
                           sendCharacter(character);
                           count++;
                     
-                          if (count === max) {
+                          if (count === maxIncriment) {
                             clearInterval(keyInterval);
-                            console.log('max reached = ', max);
+                            // console.log('max reached = ', maxIncriment);
                           }
                         }
                       }, incrementInterval);
                 }
             } else {
                 // only send once
-                console.log('send once = ', character);
+                // console.log('send once = ', character);
                 sendCharacter(character);
             }
         });
+
 
         $button.addEventListener('touchend', () => {
             if (keyInterval !== null) {
@@ -60,13 +63,6 @@ function madVR() {
                 keyInterval = null;
             }
         });
-
-        // $button.addEventListener('touchmove', () => {
-        //     if (keyInterval !== null) {
-        //         clearInterval(keyInterval);
-        //         keyInterval = null;
-        //     }
-        // });
     });
 
 }
@@ -75,4 +71,5 @@ window.onload = function() {
     power();
     tabs();
     madVR();
+    jvc();
 }

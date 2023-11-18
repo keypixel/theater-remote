@@ -26,8 +26,8 @@
         <button class="player down"><i></i></button>
         <button class="player enter"></button>
       </div>
-      <button class="player back"><svg><use href="img/i.svg#back"/></svg></button>
-      <button class="player home"><svg><use href="img/i.svg#circle"/></svg></button>
+      <button class="player bottom-left"><svg><use href="img/i.svg#back"/></svg></button>
+      <button class="player bottom-right"><svg><use href="img/i.svg#circle"/></svg></button>
     </nav>
 
     <div id="video_controls">

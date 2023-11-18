@@ -13,12 +13,16 @@ $buttonIconHover: #fff;
   stroke-width: 3px;
 }
 
-@import 'main', 'anthem', 'madvr', 'modal';
+@import 'main', 'anthem', 'madvr', 'jvc', 'modal';
 
 * {
   margin: 0;
   padding: 0;
   user-select: none;
+}
+
+button {
+  z-index: 1;
 }
 
 body{
@@ -92,7 +96,7 @@ nav#pages {
     &.plex svg {width: 120px}
     &.madvr-page svg {width: 80px}
     &.anthem svg {width: 60px}
-    &.jvc svg {width: 100px}
+    &.jvc-page svg {width: 100px}
     &.lights svg {width: 60px}
   }
 }

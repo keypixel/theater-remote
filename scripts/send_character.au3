@@ -2,10 +2,10 @@
 If $CmdLine[0] = 1 Then
     $character = $CmdLine[1]
 
-    If $character = "shutdown" Then
+    If $character = "shutdownMadVR" Then
         ; Run a system shutdown command
         Shutdown(1) ; 1 stands for a complete system shutdown
-    ElseIf $character = "restart" Then
+    ElseIf $character = "restartMadVR" Then
         ; Run a system restart command
         Shutdown(2) ; 2 stands for a system restart
     Else

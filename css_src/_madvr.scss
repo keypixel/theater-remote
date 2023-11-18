@@ -4,6 +4,7 @@
   align-items: center;
   color: $buttonIcon;
   font-size: 3rem;
+  padding-top: 200px;
 
   .adjustments {
 
@@ -48,12 +49,25 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;  
     }
-    &.toggle {
+    &.btn {
       margin: 20px 10px;
       padding: 0 80px;
     }
   }
 
+
+  .debug {
+    transform: scale(0.7);
+    // center align items
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      white-space: nowrap;
+      margin: 20px;
+    }
+  }
   // first button
 
   #response {

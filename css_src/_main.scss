@@ -206,14 +206,13 @@ nav.d-pad {
 
   // div
 
-  .back,
-  .home {
+  .top-left, .top-right, .bottom-left, .bottom-right {
     position: absolute;
-    bottom: -10px;
     width: 14%;
     aspect-ratio: 1;
     border-radius: 50%;
     background: $buttonBG;
+    font-size: 2rem;
 
     &:active {
       background: $buttonBGhover
@@ -226,15 +225,26 @@ nav.d-pad {
     }
   }
 
-  .back {
+  .top-left { 
+    top: -10px;
     left: 10px;
+  }
 
+  .top-right {
+    top: -10px;
+    right: 10px
+  }
+
+  .bottom-left { 
+    bottom: -10px;
+    left: 10px;
     svg {
       margin-right: 10px;
     }
   }
 
-  .home {
+  .bottom-right {
+    bottom: -10px;
     right: 10px
   }
 }
