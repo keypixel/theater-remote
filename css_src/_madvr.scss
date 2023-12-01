@@ -4,11 +4,8 @@
   align-items: center;
   color: $buttonIcon;
   font-size: 3rem;
-  padding-top: 200px;
+  padding-top: 140px;
 
-  .adjustments {
-
-  }
   
   .adjustments div {
     margin: 14px;
@@ -26,8 +23,8 @@
 
   button {
     margin: 10px 0;
-    height: 120px;
-    border-radius: 60px;
+    height: 80px;
+    border-radius: 40px;
     white-space: nowrap;
     background: $buttonBG;
     border: none;

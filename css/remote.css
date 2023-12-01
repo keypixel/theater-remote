@@ -1,32 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
-.svg-stroke, nav#pages button svg, body .modal.power .bg button svg, #video_controls button svg, nav.d-pad .top-left svg, nav.d-pad .top-right svg, nav.d-pad .bottom-left svg, nav.d-pad .bottom-right svg, #aspect-lights .bulb svg, #power-source #power svg {
+.svg-stroke, nav#pages button svg, body .modal.power .bg button svg, #video_controls button svg, nav.d-pad .top-left svg, nav.d-pad .top-right svg, nav.d-pad .bottom-left svg, nav.d-pad .bottom-right svg, #aspect-lights .bulb svg, #power-input #power svg {
   fill: transparent;
   stroke: #b4b4b4;
   stroke-width: 3px;
 }
 
-#power-source {
+#power-input {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 }
-#power-source #power svg {
+#power-input #power svg {
   position: absolute;
   left: 0;
   height: 80px;
   width: 80px;
 }
-#power-source #main_current_input_select {
+#power-input #main_current_input_select {
   position: absolute;
   right: 0;
   background: transparent;
   border: 0;
   outline: none;
   font-size: 3rem;
-  color: #power-source #main_current_input_select buttonIcon !important;
+  color: #power-input #main_current_input_select buttonIcon !important;
 }
-#power-source #main_current_input_select option {
+#power-input #main_current_input_select option {
   background: #111111;
   color: #b4b4b4;
 }
@@ -106,8 +106,8 @@ nav.d-pad {
   position: absolute;
   display: flex;
   justify-content: center;
-  top: 720px;
-  width: 100%;
+  top: 480px;
+  width: 80%;
 }
 nav.d-pad div {
   width: 84%;
@@ -130,8 +130,8 @@ nav.d-pad div button:active {
 nav.d-pad div button i {
   display: inline-block;
   content: "";
-  width: 3rem;
-  height: 3rem;
+  width: 10%;
+  height: 10%;
   border-left: 1px solid #b4b4b4;
   border-bottom: 1px solid #b4b4b4;
 }
@@ -210,7 +210,7 @@ nav.d-pad .bottom-right {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 1580px;
+  top: 1200px;
   left: 0;
   right: 0;
   height: 160px;
@@ -357,7 +357,7 @@ div.avm70 {
   align-items: center;
   color: #b4b4b4;
   font-size: 3rem;
-  padding-top: 200px;
+  padding-top: 140px;
 }
 #madvr-page .adjustments div {
   margin: 14px;
@@ -373,8 +373,8 @@ div.avm70 {
 }
 #madvr-page button {
   margin: 10px 0;
-  height: 120px;
-  border-radius: 60px;
+  height: 80px;
+  border-radius: 40px;
   white-space: nowrap;
   background: #111111;
   border: none;
@@ -425,15 +425,15 @@ div.avm70 {
 
 #jvc-page button.btn {
   margin: 0 20px;
-  width: 180px;
-  height: 180px;
-  border-radius: 90px;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
   white-space: nowrap;
   background: #111111;
   border: none;
   background: #111111;
   color: #b4b4b4;
-  font-size: 2rem;
+  font-size: 1.4rem;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -443,7 +443,7 @@ div.avm70 {
 }
 #jvc-page .top-buttons, #jvc-page .bottom-buttons {
   position: absolute;
-  top: 300px;
+  top: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -453,7 +453,7 @@ div.avm70 {
   margin: 20px;
 }
 #jvc-page .bottom-buttons {
-  top: 1550px;
+  top: 1160px;
 }
 
 body .modal.power {
@@ -536,7 +536,7 @@ section {
   display: none !important;
   justify-content: center;
   position: absolute;
-  inset: 0 40px 160px;
+  inset: 0 10px 160px;
   overflow: hidden;
   opacity: 0;
   transition: 0.2s ease-out;

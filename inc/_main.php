@@ -1,6 +1,7 @@
     
-    <div id="power-source">
+    <div id="power-input">
       <button id="power"><svg><use href="img/i.svg#power"/></svg></button>
+      <!-- AVM70 Input -->
       <select id="main_current_input_select">
         <!-- dynamically added -->
         <option>SHIELD</option>
@@ -33,7 +34,7 @@
     <div id="video_controls">
       <button class="player rewind-fast"><<</button>
       <button class="player rewind"><</button>
-      <button class="player playPause"><svg><use href="img/i.svg#play-pause"/></svg></button>
+      <button class="player play-pause"><svg><use href="img/i.svg#play-pause"/></svg></button>
       <button class="player forward">></button>
       <button class="player forward-fast">>></button>
     </div>
