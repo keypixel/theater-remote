@@ -8,5 +8,12 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true
   },
-  "hide-files.files": []
+  "hide-files.files": [],
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.useWebExt": true,
+  "liveServer.settings.proxy": {
+      "enable": true,
+      "baseUri": "/",
+      "proxyUri": "http://localhost:8888/theater-remote/"
+  },
 }

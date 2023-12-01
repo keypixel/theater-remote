@@ -1,3 +1,5 @@
 node_modules/*
 scripts/logs/*
 .DS_Store
+scripts/logs/send-keys.php.log
+scripts/execution.log
